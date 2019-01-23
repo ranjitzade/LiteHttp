@@ -54,10 +54,12 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener, 
     }
 
     private fun fetchData() {
-        LiteHttp.httpLoader(this).url(Constants.URL)
+        LiteHttp.httpLoader(this)
+                .url(Constants.URL)
                 .method(Method.GET)
                 .clazz(Pinterest::class.java)
-                .listener(this).execute()
+                .listener(this)
+                .execute()
     }
 
     override fun onDestroy() {

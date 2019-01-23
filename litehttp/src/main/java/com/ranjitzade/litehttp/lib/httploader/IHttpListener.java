@@ -8,5 +8,5 @@ import com.ranjitzade.litehttp.lib.core.response.ErrorResponse;
 public interface IHttpListener<T> {
     void onSuccess(T t);
 
-    void onError(ErrorResponse code);
+    void onError(ErrorResponse response);
 }
